@@ -1,0 +1,24 @@
+{
+  "name": "ddd-api-pdi",
+  "version": "1.0.0",
+  "description": "api do PDI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "author": "Kauan Portela",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^5.6.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/node": "^24.5.1",
+    "eslint": "^9.35.0",
+    "globals": "^16.4.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0"
+  }
+}
