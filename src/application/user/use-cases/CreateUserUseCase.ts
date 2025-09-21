@@ -1,10 +1,12 @@
 import { randomUUID } from 'crypto';
-import { User } from '../../../domain/user/entities/User';
-import { type IUserRepository } from '../../../domain/user/repositories/IUserRepository';
-import { Email } from '../../../domain/user/value-objects/Email';
-import { Id } from '../../../domain/user/value-objects/Id';
-import { Password } from '../../../domain/user/value-objects/Password';
-import { DomainError } from '../../../shared/errors/DomainError';
+
+import { DomainError } from '@shared/errors/DomainError';
+
+import { User } from '@domain/user/entities/User';
+import { IUserRepository } from '@domain/user/repositories/IUserRepository';
+import { Email } from '@domain/user/value-objects/Email';
+import { Id } from '@domain/user/value-objects/Id';
+import { Password } from '@domain/user/value-objects/Password';
 
 export interface CreateUserDTO {
   name: string;

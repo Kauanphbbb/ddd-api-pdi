@@ -1,4 +1,4 @@
-import { DomainError } from '../../../shared/errors/DomainError';
+import { DomainError } from '@shared/errors/DomainError';
 
 export class Password {
   private constructor(private readonly value: string) {}
@@ -13,7 +13,9 @@ export class Password {
     }
 
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-      throw new DomainError('Senha deve conter pelo menos 1 caractere especial.');
+      throw new DomainError(
+        'Senha deve conter pelo menos 1 caractere especial.',
+      );
     }
 
     return new Password(password);

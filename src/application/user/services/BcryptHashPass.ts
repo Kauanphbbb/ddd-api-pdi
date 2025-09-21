@@ -1,5 +1,6 @@
 import { compare, hash } from 'bcryptjs';
-import { IHashPassword } from '../../../domain/user/services/HashPassword';
+
+import { IHashPassword } from '@domain/user/services/HashPassword';
 
 export class BcryptHashPass implements IHashPassword {
   async hash(password: string): Promise<string> {

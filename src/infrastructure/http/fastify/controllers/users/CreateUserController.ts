@@ -1,9 +1,9 @@
-// src/infrastructure/http/fastify/controllers/CreateUserController.ts
 import type { FastifyReply, FastifyRequest } from 'fastify';
+
 import {
+  CreateUserDTO,
   CreateUserUseCase,
-  type CreateUserDTO,
-} from '../../../../../application/user/use-cases/CreateUserUseCase';
+} from '@application/user/use-cases/CreateUserUseCase';
 
 export class CreateUserController {
   constructor(private readonly createUserUseCase: CreateUserUseCase) {

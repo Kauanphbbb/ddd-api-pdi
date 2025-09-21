@@ -1,7 +1,9 @@
 import { type FastifyInstance } from 'fastify';
-import { CreateUserUseCase } from '../../../../application/user/use-cases/CreateUserUseCase';
-import { UserRepositoryInMemory } from '../../../database/UserRepositoryInMemory';
-import { CreateUserController } from '../controllers/users/CreateUserController';
+
+import { UserRepositoryInMemory } from '@infrastructure/database/UserRepositoryInMemory';
+import { CreateUserController } from '@infrastructure/http/fastify/controllers/users/CreateUserController';
+
+import { CreateUserUseCase } from '@application/user/use-cases/CreateUserUseCase';
 
 const userRepo = new UserRepositoryInMemory();
 
