@@ -6,11 +6,17 @@ import {
 } from '@application/user/use-cases/CreateUserUseCase';
 
 export class CreateUserController {
-  constructor(private readonly createUserUseCase: CreateUserUseCase) {
+  public constructor(private readonly createUserUseCase: CreateUserUseCase) {
     this.handle = this.handle.bind(this);
   }
 
-  async handle(request: FastifyRequest, reply: FastifyReply) {
+  public async handle(request: FastifyRequest, reply: FastifyReply) {
+    if (!request.body) {
+      return reply.status(400).send({
+        error: 'Dados inválidos.',
+      });
+    }
+
     const { name, email, password } = request.body as CreateUserDTO;
 
     const user = await this.createUserUseCase.execute({
@@ -20,7 +26,7 @@ export class CreateUserController {
     });
 
     return reply.status(201).send({
-      id: user.id,
+      id: user.id.getValue(),
       name: user.name,
       email: user.email.getValue(),
     });

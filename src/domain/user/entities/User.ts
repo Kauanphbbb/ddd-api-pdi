@@ -3,10 +3,10 @@ import { Id } from '@domain/user/value-objects/Id';
 import { Password } from '@domain/user/value-objects/Password';
 
 export class User {
-  constructor(
+  public constructor(
     public readonly id: Id,
     public readonly name: string,
     public readonly email: Email,
-    public readonly password: Password,
+    private readonly password: Password,
   ) {}
 }

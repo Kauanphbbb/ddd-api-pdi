@@ -1,5 +1,5 @@
 export class DomainError extends Error {
-  constructor(message: string) {
+  public constructor(message: string) {
     super(message);
 
     this.name = 'DomainError';

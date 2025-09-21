@@ -18,6 +18,9 @@ export default [
 
       quotes: ['warn', 'single', { avoidEscape: true }],
       semi: ['warn', 'always'],
+      '@typescript-eslint/no-empty-function': 'warn',
+      '@typescript-eslint/explicit-member-accessibility': 'warn',
+      '@typescript-eslint/member-ordering': 'warn',
 
       // Regra para ordenar imports (path mappings primeiro)
       'import/order': [

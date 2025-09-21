@@ -1,5 +1,6 @@
-import { Id } from '@domain/user/value-objects/Id';
 import { DomainError } from '@shared/errors/DomainError';
+
+import { Id } from '@domain/user/value-objects/Id';
 
 describe('Id Value Object', () => {
   it('deve criar um Id válido com prefixo "usr_"', () => {

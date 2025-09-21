@@ -3,7 +3,7 @@ import { DomainError } from '@shared/errors/DomainError';
 export class Email {
   private constructor(private readonly value: string) {}
 
-  static create(email: string): Email {
+  public static create(email: string): Email {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!regex.test(email)) {

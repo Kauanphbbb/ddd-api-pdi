@@ -16,12 +16,12 @@ export interface CreateUserDTO {
 }
 
 export class CreateUserUseCase {
-  constructor(
+  public constructor(
     private readonly userRepository: IUserRepository,
     private readonly passwordHashProvider: IHashPassword,
   ) {}
 
-  async execute(data: CreateUserDTO): Promise<User> {
+  public async execute(data: CreateUserDTO): Promise<User> {
     const email = Email.create(data.email);
 
     const password = Password.create(data.password);

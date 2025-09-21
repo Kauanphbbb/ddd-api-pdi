@@ -1,5 +1,7 @@
-import { Email } from '@domain/user/value-objects/Email';
 import { DomainError } from '@shared/errors/DomainError';
+
+import { Email } from '@domain/user/value-objects/Email';
+
 
 describe('Email Value Object', () => {
   it('deve criar um email válido e converter para lowercase', () => {
