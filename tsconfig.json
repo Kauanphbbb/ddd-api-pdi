@@ -12,9 +12,16 @@
     "outDir": "./dist",
     "strict": true,
     "strictPropertyInitialization": false,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@shared/*": ["./shared/*"],
+      "@domain/*": ["./domain/*"],
+      "@infrastructure/*": ["./infrastructure/*"],
+      "@application/*": ["./application/*"]
+    }
   }
 }

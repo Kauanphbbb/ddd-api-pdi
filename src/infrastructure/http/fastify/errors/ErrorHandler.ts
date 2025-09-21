@@ -1,5 +1,5 @@
-import type { FastifyError, FastifyReply, FastifyRequest } from "fastify";
-import { DomainError } from "../../../../shared/errors/DomainError";
+import type { FastifyError, FastifyReply, FastifyRequest } from 'fastify';
+import { DomainError } from '../../../../shared/errors/DomainError';
 
 export function errorHandler(
   error: FastifyError,
@@ -15,6 +15,6 @@ export function errorHandler(
   console.error(error);
 
   return reply.status(500).send({
-    error: "Erro interno do servidor.",
+    error: 'Erro interno do servidor.',
   });
 }

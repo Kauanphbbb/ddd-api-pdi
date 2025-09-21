@@ -1,4 +1,4 @@
-import { DomainError } from "../../../shared/errors/DomainError";
+import { DomainError } from '../../../shared/errors/DomainError';
 
 export class Email {
   private constructor(private readonly value: string) {}
@@ -7,7 +7,7 @@ export class Email {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!regex.test(email)) {
-      throw new DomainError("E-mail inválido.");
+      throw new DomainError('E-mail inválido.');
     }
 
     return new Email(email.toLowerCase());
