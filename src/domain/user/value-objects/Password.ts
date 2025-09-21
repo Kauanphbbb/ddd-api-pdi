@@ -21,6 +21,10 @@ export class Password {
     return new Password(password);
   }
 
+  static createFromHash(hash: string): Password {
+    return new Password(hash);
+  }
+
   public getValue(): string {
     return this.value;
   }

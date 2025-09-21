@@ -1,7 +1,7 @@
 import Fastify from 'fastify';
 
-import { errorHandler } from './infrastructure/http/fastify/errors/ErrorHandler';
-import { userRoutes } from './infrastructure/http/fastify/routes/userRoutes';
+import { errorHandler } from '@infrastructure/http/fastify/errors/ErrorHandler';
+import { userRoutes } from '@infrastructure/http/fastify/routes/userRoutes';
 
 async function bootstrap() {
   const app = Fastify();

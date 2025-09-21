@@ -28,4 +28,12 @@ describe('Password Value Object', () => {
       'Senha deve conter pelo menos 1 caractere especial.',
     );
   });
+
+  it('deve criar uma senha a partir de um hash', () => {
+    const hash = 'someHash';
+
+    const password = Password.createFromHash(hash);
+
+    expect(password.getValue()).toBe(hash);
+  });
 });
